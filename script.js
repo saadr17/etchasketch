@@ -7,7 +7,7 @@ window.onload = function () {
 
 const initialize = () => {
   const board = document.getElementById("board");
-  board.style.width = "600px";
+  board.style.width = `${width * 36.6}px`;
 
   for (let r = 0; r < height; r++) {
     for (let c = 0; c < width; c++) {
@@ -22,6 +22,6 @@ const initialize = () => {
 
   //listen for mouserover
   board.addEventListener("mouseover", (e) => {
-    e.target.style.backgroundColor = "orange";
+    e.target.style.backgroundColor = "blue";
   });
 };
