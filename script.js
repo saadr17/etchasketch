@@ -1,6 +1,8 @@
 let height = 16; // number of guesses
 let width = 16;
 
+const clearButton = document.querySelector("#clearButton");
+
 window.onload = function () {
   initialize();
 };
@@ -22,6 +24,13 @@ const initialize = () => {
 
   //listen for mouserover
   board.addEventListener("mouseover", (e) => {
-    e.target.style.backgroundColor = "blue";
+    e.target.classList.add("blue");
+  });
+  const span = document.querySelectorAll(".tile");
+  clearButton.addEventListener("click", (e) => {
+    // span.classList.add("reset");
+    for (const s of span) {
+      s.classList.remove("blue");
+    }
   });
 };
